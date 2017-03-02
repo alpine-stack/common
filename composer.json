@@ -1,0 +1,24 @@
+{
+  "name": "alpine-stack/common",
+  "description": "Common library for Alpine platform",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Andrzej Kostrzewa",
+      "email": "com.kontakt@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.1",
+    "doctrine/orm": "~2.5",
+    "league/tactician": "~1.0",
+    "ramsey/uuid": "~3.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Common\\": "src/Common/"
+    }
+  }
+}
