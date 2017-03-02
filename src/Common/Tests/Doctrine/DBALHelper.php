@@ -2,7 +2,7 @@
  /**
  * This file is part of the Common package.
  *
- * (c) Andrzej Kostrzewa <bok.comstudio@gmail.com>
+ * (c) Andrzej Kostrzewa <com.kontakt@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -25,7 +25,7 @@ trait DBALHelper
         $dbParams = json_decode(COMMON_TEST_DB_CONNECTION, true);
         $config   = $dbParams;
         unset($config['dbname'], $config['path'], $config['url']);
-        switch($dbParams['driver']) {
+        switch ($dbParams['driver']) {
             case 'pdo_pgsql':
             case 'pdo_mysql':
                 $tmpConnection = DriverManager::getConnection($config);

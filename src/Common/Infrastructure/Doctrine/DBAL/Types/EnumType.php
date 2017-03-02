@@ -2,7 +2,7 @@
  /**
  * This file is part of the Common package.
  *
- * (c) Andrzej Kostrzewa <bok.comstudio@gmail.com>
+ * (c) Andrzej Kostrzewa <com.kontakt@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -32,7 +32,9 @@ class EnumType extends Type
      */
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) : string
     {
-        $values = array_map(function($value) { return '\'' .$value. '\''; }, $this->values);
+        $values = array_map(function ($value) {
+            return '\'' .$value. '\'';
+        }, $this->values);
 
         return 'ENUM(' .implode(', ', $values). ')';
     }
